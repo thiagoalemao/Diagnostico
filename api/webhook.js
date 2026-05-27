@@ -1,19 +1,14 @@
 // api/webhook.js — Vercel Serverless Function
-// POST /api/webhook
-// Recebe notificações de pagamento do Asaas.
-// Configure no painel Asaas → Integrações → Webhooks:
-//   URL:   https://SEU_DOMINIO/api/webhook
-//   Token: o mesmo valor de ASAAS_WEBHOOK_TOKEN nas variáveis de ambiente
-
 'use strict';
 
 const crm = require('../lib/crm');
-const { readJsonBody, methodNotAllowed } = require('./_helpers');
+const { cors, readJsonBody, methodNotAllowed } = require('./_helpers');
 
 module.exports = async function handler(req, res) {
+  cors(res);
+  if (req.method === 'OPTIONS') return res.status(200).end();
   if (req.method !== 'POST') return methodNotAllowed(res, ['POST']);
 
-  // Validação de token, se configurado. Sem token => aceita (com aviso).
   const expectedToken = process.env.ASAAS_WEBHOOK_TOKEN;
   if (expectedToken) {
     const received = req.headers['asaas-access-token'] || req.headers['Asaas-Access-Token'];
@@ -38,7 +33,7 @@ module.exports = async function handler(req, res) {
       value: payment && payment.value,
       billingType: payment && payment.billingType,
       customer: payment && payment.customer,
-    }).catch(() => { /* silencioso */ });
+    }).catch(() => {});
   }
 
   return res.status(200).json({ received: true });
