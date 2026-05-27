@@ -1,0 +1,19 @@
+{
+  "name": "diagnostico-financeiro-vet",
+  "version": "1.0.0",
+  "description": "Landing + checkout Asaas + formulário de diagnóstico para Thiago Alemão Gestão Empresarial Veterinária",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}

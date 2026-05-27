@@ -1,0 +1,1681 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diagnóstico Financeiro Vet | Clareza para o seu negócio veterinário</title>
+<meta name="description" content="Análise personalizada do seu negócio veterinário e reunião de 1 hora com Dr. Thiago. Descubra onde está o seu lucro e o que mudar para tê-lo de volta.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','678415494826119');
+fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=678415494826119&ev=PageView&noscript=1"/></noscript>
+
+<style>
+:root {
+  --bg: #0a0e1a;
+  --bg-2: #0d1320;
+  --bg-3: #131929;
+  --bg-4: #181f31;
+  --gold: #c9a86b;
+  --gold-2: #d4b478;
+  --gold-soft: rgba(201,168,107,.1);
+  --gold-line: rgba(201,168,107,.22);
+  --gold-line-soft: rgba(201,168,107,.12);
+  --text: #ebedf2;
+  --text-2: #9ba3b4;
+  --text-3: #6b7280;
+  --line: rgba(255,255,255,.06);
+  --line-2: rgba(255,255,255,.1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;font-weight:400;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{font-family:inherit}
+
+.container{max-width:1140px;margin:0 auto;padding:0 28px}
+.section{padding:120px 0}
+.section-tight{padding:80px 0}
+
+/* Typography */
+h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;line-height:1.15;font-weight:500;letter-spacing:-0.01em}
+.eyebrow{display:inline-block;font-family:'Inter',sans-serif;font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;position:relative;padding-left:32px}
+.eyebrow::before{content:'';position:absolute;left:0;top:50%;width:20px;height:1px;background:var(--gold)}
+.eyebrow.center{padding:0 32px}
+.eyebrow.center::before{left:0;width:20px}
+.eyebrow.center::after{content:'';position:absolute;right:0;top:50%;width:20px;height:1px;background:var(--gold)}
+h2.title{font-size:clamp(2.2rem,4.4vw,3.4rem);font-weight:500;color:var(--text);margin-bottom:20px;line-height:1.1}
+h2.title em{font-style:italic;color:var(--gold);font-weight:400}
+.lead{font-size:1.05rem;color:var(--text-2);line-height:1.75;font-weight:300;max-width:600px}
+.lead.center{margin-left:auto;margin-right:auto;text-align:center}
+.section-head{text-align:center;margin-bottom:72px}
+.section-head h2{margin-left:auto;margin-right:auto;max-width:720px}
+.section-head .lead{margin:20px auto 0}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;font-family:'Inter',sans-serif;font-weight:500;font-size:.95rem;padding:18px 36px;border-radius:2px;border:none;cursor:pointer;transition:all .25s ease;letter-spacing:.04em;white-space:nowrap;text-transform:uppercase}
+.btn-primary{background:var(--gold);color:var(--bg)}
+.btn-primary:hover{background:var(--gold-2);transform:translateY(-1px);box-shadow:0 12px 28px rgba(201,168,107,.18)}
+.btn-ghost{background:transparent;color:var(--text);border:1px solid var(--gold-line)}
+.btn-ghost:hover{background:var(--gold-soft);border-color:var(--gold);color:var(--gold)}
+.btn .arrow{width:14px;height:1px;background:currentColor;position:relative;transition:width .25s}
+.btn .arrow::after{content:'';position:absolute;right:-1px;top:-3px;width:7px;height:7px;border-top:1px solid currentColor;border-right:1px solid currentColor;transform:rotate(45deg)}
+.btn .arrow.down{width:1px;height:14px;background:currentColor}
+.btn .arrow.down::after{right:-3px;top:auto;bottom:-1px;transform:rotate(135deg)}
+.btn:hover .arrow:not(.down){width:22px}
+.btn:hover .arrow.down{height:22px}
+
+/* Animations */
+.fade-in{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+.fade-in.visible{opacity:1;transform:none}
+
+/* Top bar */
+.topbar{background:var(--bg-2);border-bottom:1px solid var(--line);padding:11px 0}
+.topbar-inner{display:flex;align-items:center;justify-content:center;gap:32px;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text-2);font-weight:500}
+.topbar-inner span.dot{width:3px;height:3px;background:var(--gold);border-radius:50%;display:inline-block}
+
+/* Nav */
+.nav{padding:24px 0;border-bottom:1px solid var(--line);background:var(--bg);position:relative;z-index:5}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.nav-logo{height:32px;opacity:.95}
+.nav-right{display:flex;align-items:center;gap:24px}
+.nav-timer{font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--text-2);letter-spacing:.06em;display:flex;align-items:center;gap:10px}
+.nav-timer span.label{color:var(--text-3);text-transform:uppercase;letter-spacing:.16em;font-size:.68rem}
+.nav-timer .time{color:var(--gold);font-weight:500}
+.nav-btn{background:transparent;border:1px solid var(--gold-line);color:var(--text);font-family:'Inter',sans-serif;font-weight:500;font-size:.78rem;padding:11px 22px;border-radius:2px;cursor:pointer;transition:all .2s;letter-spacing:.08em;text-transform:uppercase}
+.nav-btn:hover{background:var(--gold-soft);border-color:var(--gold);color:var(--gold)}
+
+/* Hero */
+.hero{padding:120px 0 110px;position:relative;overflow:hidden;background:var(--bg)}
+.hero::before{content:'';position:absolute;top:-200px;right:-200px;width:700px;height:700px;background:radial-gradient(circle,rgba(201,168,107,.05) 0%,transparent 70%);pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-200px;left:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(201,168,107,.03) 0%,transparent 70%);pointer-events:none}
+.hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:center;position:relative;z-index:1}
+.hero h1{font-size:clamp(2.4rem,5vw,3.8rem);font-weight:500;color:var(--text);margin-bottom:28px;line-height:1.08;letter-spacing:-0.02em}
+.hero h1 em{font-style:italic;color:var(--gold);font-weight:400}
+.hero-sub{font-size:1.1rem;color:var(--text-2);line-height:1.75;margin-bottom:44px;max-width:520px;font-weight:300}
+.hero-meta{display:flex;align-items:center;gap:28px;margin-bottom:40px;padding-top:32px;border-top:1px solid var(--line)}
+.hero-meta-item{display:flex;flex-direction:column;gap:6px}
+.hero-meta-label{font-size:.66rem;color:var(--text-3);letter-spacing:.2em;text-transform:uppercase;font-weight:500}
+.hero-meta-value{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--text);font-weight:500;line-height:1.1}
+.hero-meta-value .gold{color:var(--gold)}
+.hero-meta-divider{width:1px;height:40px;background:var(--line-2)}
+.hero-cta-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:24px}
+.hero-trust{display:flex;align-items:center;gap:14px;font-size:.78rem;color:var(--text-3);letter-spacing:.08em}
+.hero-trust svg{flex-shrink:0;color:var(--gold)}
+
+.hero-visual{position:relative}
+.hero-visual img{width:100%;height:auto;display:block;filter:saturate(.85) contrast(1.05);border:1px solid var(--gold-line-soft)}
+.hero-stat{position:absolute;background:var(--bg-3);border:1px solid var(--gold-line-soft);padding:18px 22px;backdrop-filter:blur(8px)}
+.hero-stat-1{bottom:-22px;left:-22px}
+.hero-stat-2{top:-22px;right:-22px}
+.hero-stat-num{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--gold);font-weight:600;line-height:1}
+.hero-stat-label{font-size:.66rem;color:var(--text-2);letter-spacing:.16em;text-transform:uppercase;margin-top:6px;font-weight:500}
+
+/* Trust band */
+.trust-band{padding:32px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-2)}
+.trust-band-inner{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:36px;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text-2);font-weight:500}
+.trust-band-inner .dot{width:3px;height:3px;background:var(--gold);border-radius:50%;display:inline-block}
+
+/* Pain section */
+.pain-section{background:var(--bg);padding:120px 0}
+.pain-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:64px}
+.pain-card{background:var(--bg);padding:48px 44px;transition:background .3s}
+.pain-card:hover{background:var(--bg-2)}
+.pain-num{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--gold);font-weight:500;margin-bottom:24px;display:flex;align-items:center;gap:14px}
+.pain-num::before{content:'';width:32px;height:1px;background:var(--gold-line)}
+.pain-card h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:500;color:var(--text);margin-bottom:14px;line-height:1.2}
+.pain-card p{font-size:.95rem;color:var(--text-2);line-height:1.75;font-weight:300}
+
+/* Pivot quote */
+.pivot-section{background:var(--bg-2);padding:120px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pivot-inner{max-width:820px;margin:0 auto;text-align:center;position:relative}
+.pivot-mark{font-family:'Cormorant Garamond',serif;font-size:5rem;color:var(--gold);line-height:.4;margin-bottom:8px;font-weight:400;height:40px;opacity:.6}
+.pivot-quote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.3rem);font-weight:400;color:var(--text);line-height:1.4;margin-bottom:32px;font-style:italic;letter-spacing:-0.005em}
+.pivot-quote em{color:var(--gold);font-style:italic;font-weight:500}
+.pivot-attr{font-size:.78rem;color:var(--text-3);letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.pivot-attr::before{content:'';display:inline-block;width:24px;height:1px;background:var(--gold);margin-right:16px;vertical-align:middle}
+
+/* Author */
+.author-section{background:var(--bg);padding:140px 0;border-top:1px solid var(--line)}
+.author-inner{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:center}
+.author-img-wrap img{width:100%;display:block;filter:saturate(.85) contrast(1.05);border:1px solid var(--gold-line-soft)}
+.author-name{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:500;color:var(--text);margin-bottom:6px;line-height:1.05}
+.author-role{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--gold);font-weight:400;font-style:italic;letter-spacing:0;text-transform:none;margin-bottom:28px;line-height:1.4}
+.author-divider{width:48px;height:1px;background:var(--gold);margin-bottom:32px;opacity:.6}
+.author-text{font-size:1rem;color:var(--text-2);line-height:1.85;margin-bottom:20px;font-weight:300}
+.author-text:last-of-type{margin-bottom:0}
+.author-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:48px;background:var(--line);border:1px solid var(--line)}
+.author-stat{background:var(--bg);padding:28px 22px;text-align:center}
+.author-stat-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;color:var(--gold);font-weight:500;line-height:1}
+.author-stat-label{font-size:.66rem;color:var(--text-2);margin-top:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:500}
+
+/* Steps */
+.steps-section{background:var(--bg-2);padding:140px 0;border-top:1px solid var(--line)}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:72px;border:1px solid var(--line)}
+.step-card{padding:56px 40px;border-right:1px solid var(--line);background:var(--bg-2);transition:background .3s;position:relative}
+.step-card:last-child{border-right:none}
+.step-card:hover{background:var(--bg-3)}
+.step-num{font-family:'Cormorant Garamond',serif;font-size:3.6rem;color:var(--gold);font-weight:400;line-height:1;margin-bottom:8px;letter-spacing:-0.02em}
+.step-num-suffix{font-size:.66rem;color:var(--text-3);letter-spacing:.2em;text-transform:uppercase;display:block;margin-bottom:24px;font-weight:500}
+.step-card h3{font-family:'Cormorant Garamond',serif;font-size:1.7rem;font-weight:500;color:var(--text);margin-bottom:16px;line-height:1.2}
+.step-card p{font-size:.92rem;color:var(--text-2);line-height:1.75;font-weight:300}
+.step-meta{margin-top:24px;padding-top:20px;border-top:1px solid var(--line);font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--text-3);letter-spacing:.06em}
+.step-meta strong{color:var(--gold);font-weight:500}
+
+/* Discover / Outcomes */
+.discover-section{background:var(--bg);padding:140px 0;border-top:1px solid var(--line)}
+.discover-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);margin-top:64px;border:1px solid var(--line)}
+.discover-card{background:var(--bg);padding:48px 44px;transition:background .3s}
+.discover-card:hover{background:var(--bg-2)}
+.discover-icon{width:40px;height:40px;border:1px solid var(--gold-line);display:flex;align-items:center;justify-content:center;margin-bottom:24px;color:var(--gold)}
+.discover-card h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:var(--text);margin-bottom:12px;line-height:1.2}
+.discover-card p{font-size:.92rem;color:var(--text-2);line-height:1.75;font-weight:300}
+
+/* What's included */
+.included-section{background:var(--bg-2);padding:140px 0;border-top:1px solid var(--line)}
+.included-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:64px}
+.included-card{background:var(--bg);border:1px solid var(--line);padding:44px 36px;transition:border-color .3s,transform .3s;position:relative}
+.included-card:hover{border-color:var(--gold-line);transform:translateY(-3px)}
+.included-card::before{content:'';position:absolute;top:0;left:0;width:40px;height:1px;background:var(--gold)}
+.included-icon{color:var(--gold);margin-bottom:28px}
+.included-card h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:var(--text);margin-bottom:14px;line-height:1.2}
+.included-card > p{font-size:.92rem;color:var(--text-2);line-height:1.7;margin-bottom:24px;font-weight:300}
+.included-list{list-style:none;display:flex;flex-direction:column;gap:12px;padding-top:24px;border-top:1px solid var(--line)}
+.included-list li{display:flex;align-items:flex-start;gap:12px;font-size:.88rem;color:var(--text-2);line-height:1.55;font-weight:300}
+.included-list li::before{content:'';width:5px;height:5px;background:var(--gold);border-radius:50%;flex-shrink:0;margin-top:8px}
+
+/* Comparison */
+.compare-section{background:var(--bg);padding:140px 0;border-top:1px solid var(--line)}
+.compare-table{margin-top:64px;border:1px solid var(--line)}
+.compare-row{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;border-bottom:1px solid var(--line)}
+.compare-row:last-child{border-bottom:none}
+.compare-row.head{background:var(--bg-2)}
+.compare-cell{padding:24px 22px;font-size:.9rem;color:var(--text-2);font-weight:300;display:flex;align-items:center;gap:10px;border-right:1px solid var(--line)}
+.compare-cell:last-child{border-right:none}
+.compare-cell.label{color:var(--text);font-weight:400}
+.compare-cell.head-cell{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--text);font-weight:500;text-transform:none;letter-spacing:0;justify-content:center;text-align:center;flex-direction:column;align-items:center;gap:4px;padding:32px 22px}
+.compare-cell.head-cell.us{color:var(--gold);background:var(--gold-soft)}
+.compare-cell.head-cell .head-tag{font-family:'Inter',sans-serif;font-size:.62rem;color:var(--text-3);letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.compare-cell.head-cell.us .head-tag{color:var(--gold);opacity:.8}
+.compare-cell.us-col{background:var(--gold-soft);color:var(--text);font-weight:400;justify-content:center;text-align:center}
+.compare-cell.center{justify-content:center;text-align:center}
+.compare-icon{flex-shrink:0;color:var(--gold)}
+.compare-icon.no{color:var(--text-3)}
+
+/* For who */
+.forwho-section{background:var(--bg-2);padding:140px 0;border-top:1px solid var(--line)}
+.forwho-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:64px}
+.forwho-card{background:var(--bg);border:1px solid var(--line);padding:48px 40px;transition:border-color .3s}
+.forwho-card.yes:hover{border-color:var(--gold-line)}
+.forwho-head{display:flex;align-items:center;gap:14px;margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.forwho-mark{width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:50%}
+.forwho-card.yes .forwho-mark{border:1px solid var(--gold);color:var(--gold)}
+.forwho-card.no .forwho-mark{border:1px solid var(--text-3);color:var(--text-3)}
+.forwho-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--text);font-weight:500}
+.forwho-list{list-style:none;display:flex;flex-direction:column;gap:18px}
+.forwho-list li{display:flex;align-items:flex-start;gap:14px;font-size:.94rem;color:var(--text-2);line-height:1.65;font-weight:300}
+.forwho-list li svg{flex-shrink:0;margin-top:5px}
+.forwho-card.yes .forwho-list li svg{color:var(--gold)}
+.forwho-card.no .forwho-list li svg{color:var(--text-3)}
+
+/* Testimonials */
+.testimonials-section{background:var(--bg);padding:140px 0;border-top:1px solid var(--line)}
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:64px;background:var(--line);border:1px solid var(--line)}
+.testimonial{background:var(--bg);padding:44px 40px;display:flex;flex-direction:column;gap:24px;transition:background .3s}
+.testimonial:hover{background:var(--bg-2)}
+.testimonial-mark{font-family:'Cormorant Garamond',serif;font-size:3.5rem;color:var(--gold);line-height:.4;font-weight:400;height:32px;opacity:.7}
+.testimonial-text{font-family:'Cormorant Garamond',serif;font-size:1.18rem;color:var(--text);line-height:1.55;font-weight:400;font-style:italic;flex:1}
+.testimonial-author{padding-top:24px;border-top:1px solid var(--line)}
+.testimonial-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--text);font-weight:500;margin-bottom:4px}
+.testimonial-role{font-size:.7rem;color:var(--text-3);letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+
+/* Offer */
+.offer-section{background:var(--bg-2);padding:140px 0;border-top:1px solid var(--line)}
+.scarcity-band{display:flex;align-items:center;justify-content:center;gap:14px;padding:14px 20px;border:1px solid var(--gold-line);background:var(--gold-soft);max-width:520px;margin:0 auto 40px;font-family:'Inter',sans-serif;font-size:.78rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;font-weight:500}
+.scarcity-band .dot-blink{width:8px;height:8px;background:var(--gold);border-radius:50%;animation:blink 1.6s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}
+.scarcity-band strong{font-weight:600;color:var(--text)}
+
+.offer-box{background:var(--bg);border:1px solid var(--gold-line-soft);max-width:880px;margin:0 auto;position:relative;padding:64px 56px}
+.offer-box::before{content:'';position:absolute;top:-1px;left:-1px;width:48px;height:48px;border-top:1px solid var(--gold);border-left:1px solid var(--gold)}
+.offer-box::after{content:'';position:absolute;bottom:-1px;right:-1px;width:48px;height:48px;border-bottom:1px solid var(--gold);border-right:1px solid var(--gold)}
+.offer-stack-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--text);font-weight:500;margin-bottom:32px;text-align:center}
+.offer-stack{display:flex;flex-direction:column;margin-bottom:14px}
+.offer-row{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
+.offer-row:last-child{border-bottom:none}
+.offer-row-label{display:flex;align-items:flex-start;gap:14px;font-size:.95rem;color:var(--text);font-weight:400}
+.offer-row-label svg{flex-shrink:0;color:var(--gold);margin-top:4px}
+.offer-row-price{font-family:'JetBrains Mono',monospace;font-size:.88rem;color:var(--text-2);white-space:nowrap}
+
+.bonus-block{background:var(--gold-soft);border:1px dashed var(--gold-line);padding:22px 24px;margin:24px 0 0}
+.bonus-block-title{font-family:'Inter',sans-serif;font-size:.66rem;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.bonus-block-title::before{content:'';width:14px;height:1px;background:var(--gold)}
+.bonus-row{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:10px 0}
+.bonus-row + .bonus-row{border-top:1px solid var(--gold-line-soft)}
+.bonus-row-label{display:flex;align-items:flex-start;gap:14px;font-size:.92rem;color:var(--text);font-weight:400}
+.bonus-row-label svg{flex-shrink:0;color:var(--gold);margin-top:4px}
+.bonus-row-price{font-family:'JetBrains Mono',monospace;font-size:.85rem;color:var(--gold);white-space:nowrap}
+
+.offer-total{display:flex;align-items:center;justify-content:space-between;padding:24px 0;border-top:1px solid var(--gold-line);border-bottom:1px solid var(--gold-line);margin:32px 0 36px}
+.offer-total-label{font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:var(--text);font-weight:500}
+.offer-total-price{font-family:'JetBrains Mono',monospace;font-size:1.05rem;color:var(--text-2);text-decoration:line-through}
+
+.offer-price-row{text-align:center;padding:48px 32px 36px;background:var(--bg-2);border:1px solid var(--gold-line-soft);margin-bottom:32px;position:relative}
+.offer-price-tag{position:absolute;top:-9px;left:50%;transform:translateX(-50%);background:var(--bg);padding:0 16px;font-family:'Inter',sans-serif;font-size:.66rem;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+.offer-price-anchor{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:14px;font-family:'JetBrains Mono',monospace;font-size:.92rem;color:var(--text-3)}
+.offer-price-anchor .from{text-decoration:line-through}
+.offer-price-off{display:inline-block;font-family:'Inter',sans-serif;font-size:.7rem;color:var(--gold);letter-spacing:.14em;font-weight:600;text-transform:uppercase;border:1px solid var(--gold);padding:3px 8px}
+.offer-price-main{font-family:'Cormorant Garamond',serif;font-size:4.2rem;color:var(--gold);font-weight:500;line-height:1;letter-spacing:-0.02em;margin-bottom:8px}
+.offer-price-main span.cents{font-size:2.2rem;vertical-align:top;margin-left:4px}
+.offer-price-installment{font-family:'JetBrains Mono',monospace;font-size:.92rem;color:var(--text-2);margin-top:14px;letter-spacing:.04em}
+.offer-price-cash{font-size:.82rem;color:var(--gold);margin-top:8px;font-family:'Inter',sans-serif}
+.offer-price-cash strong{font-family:'JetBrains Mono',monospace;font-weight:500}
+
+.offer-cta-area{display:flex;flex-direction:column;gap:18px;align-items:center}
+.offer-cta-area .btn{width:100%;padding:22px;font-size:1rem}
+.offer-trust-row{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;font-size:.74rem;color:var(--text-3);letter-spacing:.08em;margin-top:6px}
+.offer-trust-row span{display:flex;align-items:center;gap:8px}
+.offer-trust-row svg{color:var(--gold);flex-shrink:0}
+
+/* Guarantee */
+.guarantee-section{background:var(--bg);padding:140px 0;border-top:1px solid var(--line)}
+.guarantee-box{display:grid;grid-template-columns:auto 1fr;gap:56px;align-items:center;max-width:880px;margin:0 auto;background:var(--bg-2);border:1px solid var(--gold-line-soft);padding:56px 56px;position:relative}
+.guarantee-box::before{content:'';position:absolute;top:-1px;left:-1px;width:48px;height:48px;border-top:1px solid var(--gold);border-left:1px solid var(--gold)}
+.guarantee-box::after{content:'';position:absolute;bottom:-1px;right:-1px;width:48px;height:48px;border-bottom:1px solid var(--gold);border-right:1px solid var(--gold)}
+.guarantee-seal{width:140px;height:140px;border:1px solid var(--gold);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;flex-shrink:0;position:relative}
+.guarantee-seal::before{content:'';position:absolute;inset:8px;border:1px solid var(--gold-line);border-radius:50%}
+.guarantee-seal-num{font-family:'Cormorant Garamond',serif;font-size:3rem;color:var(--gold);font-weight:500;line-height:1}
+.guarantee-seal-label{font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-2);margin-top:6px;font-weight:500;text-align:center}
+.guarantee-title{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:var(--text);font-weight:500;margin-bottom:16px;line-height:1.2}
+.guarantee-text{font-size:.96rem;color:var(--text-2);line-height:1.8;font-weight:300}
+
+/* FAQ */
+.faq-section{background:var(--bg-2);padding:140px 0;border-top:1px solid var(--line)}
+.faq-list{max-width:820px;margin:64px auto 0;border-top:1px solid var(--line)}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;text-align:left;padding:28px 4px;background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:24px;font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:var(--text);font-weight:500;line-height:1.3;transition:color .2s}
+.faq-q:hover{color:var(--gold)}
+.faq-q .icon{width:24px;height:24px;flex-shrink:0;position:relative}
+.faq-q .icon::before,.faq-q .icon::after{content:'';position:absolute;background:var(--gold);transition:transform .3s}
+.faq-q .icon::before{top:50%;left:0;width:100%;height:1px;transform:translateY(-50%)}
+.faq-q .icon::after{top:0;left:50%;height:100%;width:1px;transform:translateX(-50%)}
+.faq-item.open .faq-q .icon::after{transform:translateX(-50%) rotate(90deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .25s;padding:0 4px;font-size:.95rem;color:var(--text-2);line-height:1.85;font-weight:300}
+.faq-item.open .faq-a{max-height:500px;padding:0 4px 28px}
+
+/* Final CTA */
+.finalcta-section{background:var(--bg);padding:160px 0;border-top:1px solid var(--line);position:relative;overflow:hidden}
+.finalcta-section::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(201,168,107,.04) 0%,transparent 60%);pointer-events:none}
+.finalcta-inner{text-align:center;max-width:760px;margin:0 auto;position:relative;z-index:1}
+.finalcta-inner h2{font-size:clamp(2.4rem,5vw,3.6rem);font-weight:500;color:var(--text);margin-bottom:28px;line-height:1.08;letter-spacing:-0.02em}
+.finalcta-inner h2 em{font-style:italic;color:var(--gold);font-weight:400}
+.finalcta-sub{font-size:1.05rem;color:var(--text-2);line-height:1.8;margin-bottom:48px;font-weight:300;max-width:600px;margin-left:auto;margin-right:auto}
+.finalcta-price{margin-bottom:40px;padding:32px;border-top:1px solid var(--gold-line-soft);border-bottom:1px solid var(--gold-line-soft);max-width:480px;margin-left:auto;margin-right:auto}
+.finalcta-from{font-family:'JetBrains Mono',monospace;font-size:.82rem;color:var(--text-3);margin-bottom:8px}
+.finalcta-from .strike{text-decoration:line-through}
+.finalcta-main{font-family:'Cormorant Garamond',serif;font-size:3rem;color:var(--gold);font-weight:500;line-height:1}
+.finalcta-installment{font-family:'JetBrains Mono',monospace;font-size:.85rem;color:var(--text-2);margin-top:10px}
+.finalcta-note{font-size:.74rem;color:var(--text-3);margin-top:24px;letter-spacing:.08em}
+.finalcta-timer-row{display:inline-flex;align-items:center;gap:10px;margin-top:24px;font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--gold);letter-spacing:.06em}
+
+/* Footer */
+.footer{background:var(--bg-2);border-top:1px solid var(--line);padding:80px 0 36px;text-align:center;position:relative}
+.footer-logo{height:64px;margin:0 auto 32px;opacity:.85;width:auto}
+.footer-cta{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--text);font-weight:500;margin-bottom:32px;font-style:italic}
+.footer-cta em{color:var(--gold);font-style:italic}
+.footer-links{display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap;margin-bottom:56px}
+.footer-link{display:inline-flex;align-items:center;gap:10px;color:var(--text-2);font-size:.9rem;font-weight:400;transition:color .2s;text-decoration:none}
+.footer-link:hover{color:var(--gold)}
+.footer-link svg{color:var(--gold);flex-shrink:0;transition:transform .2s}
+.footer-link:hover svg{transform:translateY(-1px)}
+.footer-divider{width:48px;height:1px;background:var(--gold-line);margin:0 auto 32px;opacity:.6}
+.footer-text{font-size:.78rem;color:var(--text-3);line-height:1.7;max-width:680px;margin:0 auto;font-weight:300}
+.footer-text a{color:var(--text-2);transition:color .2s;border-bottom:1px solid var(--line-2)}
+.footer-text a:hover{color:var(--gold);border-color:var(--gold-line)}
+.footer-text .sep{color:var(--gold);margin:0 10px;opacity:.6}
+@media(max-width:600px){
+  .footer{padding:64px 0 32px}
+  .footer-links{gap:24px;flex-direction:column}
+  .footer-cta{font-size:1.15rem;padding:0 24px}
+  .footer-logo{height:52px}
+}
+
+/* Sticky CTA */
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:99;background:rgba(10,14,26,.96);backdrop-filter:blur(16px);border-top:1px solid var(--gold-line);padding:18px 32px;display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:36px;transform:translateY(100%);transition:transform .4s;box-shadow:0 -10px 32px rgba(0,0,0,.45)}
+.sticky-cta::before{content:'';position:absolute;top:-1px;left:50%;transform:translateX(-50%);width:120px;height:1px;background:var(--gold)}
+.sticky-cta.visible{transform:none}
+
+.sticky-product{display:flex;flex-direction:column;gap:8px;min-width:0}
+.sticky-eyebrow{font-family:'Inter',sans-serif;font-size:.62rem;color:var(--gold);letter-spacing:.22em;text-transform:uppercase;font-weight:600;line-height:1;display:flex;align-items:center;gap:10px}
+.sticky-eyebrow::before{content:'';width:14px;height:1px;background:var(--gold)}
+.sticky-price-row{display:flex;align-items:baseline;gap:14px;line-height:1;flex-wrap:wrap}
+.sticky-from{font-family:'JetBrains Mono',monospace;font-size:.82rem;color:var(--text-3);text-decoration:line-through;text-decoration-thickness:1px;text-decoration-color:rgba(107,114,128,.5);letter-spacing:.02em}
+.sticky-price{font-family:'Cormorant Garamond',serif;font-size:1.85rem;color:var(--gold);font-weight:500;line-height:1;letter-spacing:-0.01em}
+.sticky-installment{font-family:'JetBrains Mono',monospace;font-size:.74rem;color:var(--text-2);letter-spacing:.04em;padding-left:16px;border-left:1px solid var(--line-2);font-weight:400}
+
+.sticky-timer{display:flex;align-items:center;gap:14px;padding:0 32px;height:52px;border-left:1px solid var(--line);border-right:1px solid var(--line)}
+.sticky-timer svg{color:var(--gold);flex-shrink:0}
+.sticky-timer-text{display:flex;flex-direction:column;gap:4px;line-height:1}
+.sticky-timer-label{font-size:.58rem;color:var(--text-3);letter-spacing:.22em;text-transform:uppercase;font-weight:500}
+.sticky-timer-value{font-family:'JetBrains Mono',monospace;font-size:1.1rem;color:var(--text);font-weight:500;letter-spacing:.04em}
+
+.sticky-btn{display:inline-flex;align-items:center;gap:12px;background:var(--gold);color:var(--bg);font-family:'Inter',sans-serif;font-weight:500;font-size:.82rem;padding:18px 34px;border-radius:2px;border:none;cursor:pointer;letter-spacing:.08em;text-transform:uppercase;transition:all .2s;flex-shrink:0}
+.sticky-btn:hover{background:var(--gold-2);transform:translateY(-1px);box-shadow:0 8px 20px rgba(201,168,107,.25)}
+.sticky-btn .arrow{width:14px;height:1px;background:currentColor;position:relative;transition:width .25s}
+.sticky-btn .arrow::after{content:'';position:absolute;right:-1px;top:-3px;width:7px;height:7px;border-top:1px solid currentColor;border-right:1px solid currentColor;transform:rotate(45deg)}
+.sticky-btn:hover .arrow{width:20px}
+
+/* Modal */
+.modal-overlay{position:fixed;inset:0;z-index:1100;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;pointer-events:none;transition:opacity .3s}
+.modal-overlay.open{opacity:1;pointer-events:all}
+.modal-box{background:var(--bg-2);border:1px solid var(--gold-line);max-width:480px;width:100%;position:relative;padding:48px 44px;transform:translateY(20px);transition:transform .3s}
+.modal-overlay.open .modal-box{transform:none}
+.modal-close{position:absolute;top:18px;right:18px;background:none;border:none;color:var(--text-3);cursor:pointer;width:28px;height:28px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;transition:color .2s}
+.modal-close:hover{color:var(--gold)}
+.modal-eyebrow{font-size:.66rem;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;font-weight:500;margin-bottom:14px}
+.modal-title{font-family:'Cormorant Garamond',serif;font-size:1.9rem;color:var(--text);font-weight:500;margin-bottom:12px;line-height:1.15}
+.modal-sub{font-size:.9rem;color:var(--text-2);margin-bottom:32px;line-height:1.65;font-weight:300}
+.modal-form{display:flex;flex-direction:column;gap:14px}
+.modal-input{background:var(--bg);border:1px solid var(--line-2);padding:16px 18px;font-family:'Inter',sans-serif;font-size:.95rem;color:var(--text);width:100%;transition:border-color .2s;outline:none;border-radius:2px;appearance:none;-webkit-appearance:none}
+.modal-input:focus{border-color:var(--gold)}
+.modal-input::placeholder{color:var(--text-3)}
+select.modal-input{background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none' stroke='%23c9a86b' stroke-width='1.5'%3E%3Cpolyline points='1,1 6,7 11,1'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 18px center;padding-right:44px;cursor:pointer}
+select.modal-input:invalid{color:var(--text-3)}
+select.modal-input option{background:var(--bg-2);color:var(--text)}
+.modal-submit{background:var(--gold);color:var(--bg);font-family:'Inter',sans-serif;font-weight:500;font-size:.92rem;padding:18px;border:none;cursor:pointer;text-transform:uppercase;letter-spacing:.08em;transition:background .2s;border-radius:2px;margin-top:6px}
+.modal-submit:hover{background:var(--gold-2)}
+.modal-note{font-size:.74rem;color:var(--text-3);text-align:center;margin-top:10px;display:flex;align-items:center;justify-content:center;gap:8px}
+.modal-note svg{color:var(--gold)}
+
+/* Payment step */
+.pay-tabs{display:flex;gap:8px;margin-bottom:20px}
+.pay-tab{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px 10px;border:1px solid var(--line-2);background:var(--bg);color:var(--text-2);font-family:'Inter',sans-serif;font-size:.82rem;font-weight:500;cursor:pointer;border-radius:2px;transition:all .2s;letter-spacing:.04em;text-transform:uppercase}
+.pay-tab:hover{border-color:var(--gold);color:var(--gold)}
+.pay-tab.active{border-color:var(--gold);background:var(--gold-soft);color:var(--gold)}
+.pay-tab-badge{background:var(--gold);color:var(--bg);font-size:.6rem;font-weight:700;padding:2px 6px;border-radius:2px;letter-spacing:.06em}
+.pay-panel{animation:fadePanel .25s ease}
+@keyframes fadePanel{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.pix-price-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--line);margin-bottom:16px}
+.pix-price-label{font-size:.8rem;color:var(--text-2)}
+.pix-price-value{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--gold);font-weight:500}
+.pix-qr-wrap{display:flex;justify-content:center;margin-bottom:12px}
+.pix-qr-img{width:200px;height:200px;border:1px solid var(--line-2);padding:8px;background:#fff;border-radius:2px}
+.pix-instruction{font-size:.78rem;color:var(--text-3);text-align:center;margin-bottom:14px}
+.pix-copy-wrap{display:flex;gap:8px;margin-bottom:10px}
+.pix-code-input{flex:1;background:var(--bg);border:1px solid var(--line-2);color:var(--text-3);font-family:'JetBrains Mono',monospace;font-size:.72rem;padding:10px 12px;border-radius:2px;outline:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pix-copy-btn{background:var(--gold-soft);border:1px solid var(--gold-line);color:var(--gold);font-family:'Inter',sans-serif;font-size:.78rem;font-weight:500;padding:10px 14px;cursor:pointer;border-radius:2px;white-space:nowrap;transition:all .2s;text-transform:uppercase;letter-spacing:.06em}
+.pix-copy-btn:hover{background:var(--gold);color:var(--bg)}
+.pix-copy-btn.copied{background:var(--gold);color:var(--bg)}
+.pix-expires{font-size:.72rem;color:var(--text-3);text-align:center}
+.card-price-info{text-align:center;padding:20px 0 16px;border-bottom:1px solid var(--line);margin-bottom:16px}
+.card-price-main{font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--gold);font-weight:500;line-height:1}
+.card-price-or{font-size:.75rem;color:var(--text-3);margin:8px 0 4px}
+.card-price-installment{font-family:'JetBrains Mono',monospace;font-size:.9rem;color:var(--text-2)}
+.card-price-installment span{color:var(--text-3);font-size:.8rem}
+.modal-back-btn{margin-top:18px;background:none;border:none;color:var(--text-3);font-family:'Inter',sans-serif;font-size:.78rem;cursor:pointer;padding:0;transition:color .2s}
+.modal-back-btn:hover{color:var(--text)}
+.modal-spinner{width:36px;height:36px;border:2px solid var(--line-2);border-top-color:var(--gold);border-radius:50%;animation:spin .7s linear infinite;margin:0 auto}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Tela de sucesso (pagamento confirmado) */
+.success-check{color:#22c55e;margin:0 auto 18px;display:flex;justify-content:center;animation:successPop .55s cubic-bezier(.16,1,.3,1) both}
+.success-check svg circle,.success-check svg path{stroke-dasharray:200;stroke-dashoffset:200;animation:successDraw .9s cubic-bezier(.16,1,.3,1) forwards}
+.success-check svg path{animation-delay:.25s}
+@keyframes successPop{0%{transform:scale(.6);opacity:0}100%{transform:scale(1);opacity:1}}
+@keyframes successDraw{to{stroke-dashoffset:0}}
+.success-next{text-align:left;background:rgba(34,197,94,.05);border:1px solid rgba(34,197,94,.18);padding:18px 20px;margin-bottom:18px}
+.success-next-title{font-family:'Inter',sans-serif;font-size:.66rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#22c55e;margin-bottom:12px}
+.success-steps{padding-left:18px;font-size:.86rem;color:var(--text-2);line-height:1.6;font-weight:300}
+.success-steps li{margin-bottom:10px}
+.success-steps li:last-child{margin-bottom:0}
+.success-contact{font-size:.76rem;color:var(--text-3);margin-bottom:16px;line-height:1.55}
+.success-contact a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,168,107,.3)}
+
+/* Indicador "aguardando pagamento" no painel Pix */
+.pix-waiting{display:flex;align-items:center;gap:10px;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:.74rem;color:var(--gold);margin-top:14px;letter-spacing:.04em}
+.pix-waiting::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px var(--gold);animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* Responsive */
+@media(max-width:960px){
+  .section{padding:80px 0}
+  .pain-section,.steps-section,.discover-section,.included-section,.author-section,.testimonials-section,.forwho-section,.offer-section,.guarantee-section,.faq-section,.compare-section{padding:80px 0}
+  .finalcta-section{padding:96px 0}
+  .hero{padding:80px 0 72px}
+  .hero-inner{grid-template-columns:1fr;gap:56px}
+  .hero-visual{display:none}
+  .hero-meta{padding-top:24px;gap:20px}
+  .pain-grid{grid-template-columns:1fr}
+  .steps-grid{grid-template-columns:1fr}
+  .step-card{border-right:none;border-top:1px solid var(--line)}
+  .step-card:first-child{border-top:none}
+  .discover-grid{grid-template-columns:1fr}
+  .included-grid{grid-template-columns:1fr;gap:16px}
+  .author-inner{grid-template-columns:1fr;gap:48px;text-align:center}
+  .author-img-wrap{max-width:340px;margin:0 auto}
+  .author-role{text-align:center}
+  .author-divider{margin-left:auto;margin-right:auto}
+  .testimonials-grid{grid-template-columns:1fr}
+  .forwho-grid{grid-template-columns:1fr;gap:16px}
+  .guarantee-box{grid-template-columns:1fr;text-align:center;gap:32px;padding:40px 32px}
+  .guarantee-seal{margin:0 auto}
+  .offer-box{padding:44px 28px}
+  .offer-price-main{font-size:3.4rem}
+  .offer-price-main span.cents{font-size:1.8rem}
+  .nav-timer{display:none}
+  .topbar-inner{gap:16px;font-size:.62rem}
+  .trust-band-inner{gap:24px;font-size:.66rem}
+  .author-stats{grid-template-columns:1fr 1fr 1fr}
+  .section-head{margin-bottom:48px}
+  .compare-row{grid-template-columns:1fr}
+  .compare-cell{border-right:none;border-bottom:1px solid var(--line);padding:14px 18px}
+  .compare-row.head{display:none}
+  .compare-cell.head-cell{display:flex;background:var(--bg-2);font-size:.95rem;padding:18px;border-bottom:1px solid var(--gold-line-soft)}
+  .compare-cell.head-cell.us{background:var(--gold-soft)}
+  .compare-cell::before{content:attr(data-label);font-size:.62rem;color:var(--text-3);letter-spacing:.16em;text-transform:uppercase;margin-right:auto;font-weight:500}
+  .compare-cell.label::before{display:none}
+  .compare-cell.label{font-family:'Cormorant Garamond',serif;font-size:1.15rem;background:var(--bg-3);padding:18px;color:var(--gold);font-weight:500}
+}
+@media(max-width:600px){
+  .hero h1{font-size:2.2rem}
+  .hero-meta{flex-direction:column;align-items:flex-start;gap:20px}
+  .hero-meta-divider{display:none}
+  .hero-cta-row{flex-direction:column;align-items:stretch}
+  .hero-cta-row .btn{width:100%}
+  .pain-card{padding:36px 28px}
+  .step-card{padding:40px 28px}
+  .discover-card{padding:36px 28px}
+  .included-card{padding:32px 24px}
+  .forwho-card{padding:32px 24px}
+  .topbar-inner > *:nth-child(n+5){display:none}
+  .trust-band-inner > *:nth-child(n+7){display:none}
+  .sticky-cta{padding:12px 16px;gap:12px;grid-template-columns:1fr auto}
+  .sticky-timer,.sticky-installment{display:none}
+  .sticky-eyebrow{font-size:.55rem;letter-spacing:.18em}
+  .sticky-eyebrow::before{display:none}
+  .sticky-price{font-size:1.4rem}
+  .sticky-from{font-size:.74rem}
+  .sticky-btn{padding:13px 22px;font-size:.74rem;gap:8px}
+  .author-stats{grid-template-columns:1fr;gap:1px}
+  .author-stat{padding:20px}
+  .testimonial{padding:36px 28px}
+  .scarcity-band{font-size:.7rem;padding:12px 16px}
+  .offer-box{padding:36px 22px}
+}
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-inner">
+      <span>Vagas limitadas por agenda</span>
+      <span class="dot"></span>
+      <span>Atendimento 1 a 1</span>
+      <span class="dot"></span>
+      <span>De veterinário para veterinário</span>
+    </div>
+  </div>
+</div>
+
+<!-- Nav -->
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <img src="assets/images/logo-v3.webp" alt="Diagnóstico Financeiro Vet" class="nav-logo" width="140" height="32">
+      <div class="nav-right">
+        <span class="nav-timer">
+          <span class="label">Oferta encerra em</span>
+          <span class="time" id="navTimer">--:--:--</span>
+        </span>
+        <button class="nav-btn" onclick="openModal()">Garantir vaga</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content fade-in">
+        <span class="eyebrow">Diagnóstico Financeiro Veterinário</span>
+        <h1>Você fatura, atende, trabalha demais. E ainda assim, o lucro <em>não aparece.</em></h1>
+        <p class="hero-sub">Não é falta de esforço. É falta de clareza sobre o que está acontecendo dentro do seu negócio. Em 1 hora de reunião, você vai entender exatamente onde está o seu lucro, e o que precisa mudar para tê-lo de volta.</p>
+
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <span class="hero-meta-label">Formato</span>
+            <span class="hero-meta-value"><span class="gold">1 a 1</span></span>
+          </div>
+          <div class="hero-meta-divider"></div>
+          <div class="hero-meta-item">
+            <span class="hero-meta-label">Reunião</span>
+            <span class="hero-meta-value">60 min</span>
+          </div>
+          <div class="hero-meta-divider"></div>
+          <div class="hero-meta-item">
+            <span class="hero-meta-label">Atendimento</span>
+            <span class="hero-meta-value">Direto com Dr. Thiago</span>
+          </div>
+        </div>
+
+        <div class="hero-cta-row">
+          <button class="btn btn-primary" onclick="openModal()">
+            Quero meu diagnóstico
+            <span class="arrow"></span>
+          </button>
+          <a href="#como-funciona" class="btn btn-ghost">
+            Como funciona
+            <span class="arrow down"></span>
+          </a>
+        </div>
+
+        <div class="hero-trust">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          Garantia de 7 dias · Pagamento seguro · Vagas limitadas
+        </div>
+      </div>
+
+      <div class="hero-visual fade-in">
+        <img src="assets/images/hero.webp" alt="Análise financeira veterinária" width="500" height="600">
+        <div class="hero-stat hero-stat-1">
+          <div class="hero-stat-num">200+</div>
+          <div class="hero-stat-label">Veterinários atendidos</div>
+        </div>
+        <div class="hero-stat hero-stat-2">
+          <div class="hero-stat-num">98%</div>
+          <div class="hero-stat-label">Satisfação</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust band -->
+<div class="trust-band">
+  <div class="container">
+    <div class="trust-band-inner">
+      <span>Análise Personalizada</span>
+      <span class="dot"></span>
+      <span>Reunião de 1 Hora</span>
+      <span class="dot"></span>
+      <span>Plano de Ação Real</span>
+      <span class="dot"></span>
+      <span>Garantia de 7 Dias</span>
+    </div>
+  </div>
+</div>
+
+<!-- Pain section -->
+<section class="pain-section">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="eyebrow center">Diagnóstico</span>
+      <h2 class="title">Se isso parece familiar,<br>o problema não é <em>falta de trabalho.</em></h2>
+      <p class="lead center">Veterinários que faturam bem mas não conseguem explicar para onde foi o dinheiro do mês raramente têm um problema operacional. Têm um problema de visibilidade.</p>
+    </div>
+
+    <div class="pain-grid">
+
+      <div class="pain-card fade-in">
+        <div class="pain-num">01</div>
+        <h3>O caixa fecha, mas a conta não bate</h3>
+        <p>Você atende, fatura, paga as contas, e mesmo assim no final do mês não sobra o que deveria. A sensação é de estar trabalhando para pagar boletos, não para construir patrimônio.</p>
+      </div>
+
+      <div class="pain-card fade-in">
+        <div class="pain-num">02</div>
+        <h3>Você não sabe quanto custa atender</h3>
+        <p>Não tem clareza do custo real por consulta, cirurgia ou exame. Cobra pelo que o mercado cobra, sem certeza de que está cobrindo seus próprios custos. Alguns serviços podem estar te dando prejuízo silenciosamente.</p>
+      </div>
+
+      <div class="pain-card fade-in">
+        <div class="pain-num">03</div>
+        <h3>Cresceu, mas não ficou mais rico</h3>
+        <p>A clínica cresceu, contratou mais gente, ampliou o atendimento. O faturamento subiu, mas o lucro proporcional não. Você se vê trabalhando mais para ganhar quase o mesmo que ganhava menor.</p>
+      </div>
+
+      <div class="pain-card fade-in">
+        <div class="pain-num">04</div>
+        <h3>Toma decisões no escuro</h3>
+        <p>Contratar, demitir, comprar equipamento, mudar de ponto, expandir serviços. Todas essas decisões dependem de números que você não tem. Você decide pela intuição e torce para dar certo.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Pivot quote -->
+<section class="pivot-section">
+  <div class="container">
+    <div class="pivot-inner fade-in">
+      <div class="pivot-mark">"</div>
+      <p class="pivot-quote">O veterinário não precisa virar contador. Mas precisa parar de tomar decisões financeiras de olhos fechados. <em>Saber é o primeiro passo de tudo.</em></p>
+      <p class="pivot-attr">Dr. Thiago, Médico Veterinário</p>
+    </div>
+  </div>
+</section>
+
+<!-- Author -->
+<section class="author-section">
+  <div class="container">
+    <div class="author-inner">
+      <div class="author-img-wrap fade-in">
+        <img src="assets/images/autor.webp" alt="Dr. Thiago" width="380" height="480">
+      </div>
+      <div class="fade-in">
+        <span class="eyebrow">Quem vai te atender</span>
+        <h2 class="author-name">Dr. Thiago</h2>
+        <p class="author-role">Veterinário, gestor e especialista em finanças veterinárias</p>
+        <div class="author-divider"></div>
+        <p class="author-text">Médico veterinário, passei pelos mesmos problemas que você enfrenta hoje. Faturava bem, trabalhava demais e não conseguia explicar por que o lucro não aparecia. Foi nessa frustração que mergulhei em gestão financeira: não a gestão genérica de MBA, mas aquela que faz sentido na realidade prática de uma clínica veterinária.</p>
+        <p class="author-text">Hoje já ajudei mais de 200 veterinários a entenderem seus números e a tomarem decisões com clareza. Cada diagnóstico é feito por mim pessoalmente, sem equipe intermediária e sem template genérico. Sou eu que vou analisar os seus dados e estar com você na reunião.</p>
+
+        <div class="author-stats">
+          <div class="author-stat">
+            <div class="author-stat-num">200+</div>
+            <div class="author-stat-label">Diagnósticos</div>
+          </div>
+          <div class="author-stat">
+            <div class="author-stat-num">1:1</div>
+            <div class="author-stat-label">Atendimento direto</div>
+          </div>
+          <div class="author-stat">
+            <div class="author-stat-num">98%</div>
+            <div class="author-stat-label">Satisfação</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How it works / Steps -->
+<section class="steps-section" id="como-funciona">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="eyebrow center">Como Funciona</span>
+      <h2 class="title">Três etapas. Um <em>diagnóstico completo.</em></h2>
+      <p class="lead center">Em até 7 dias úteis, você passa de "não entendo meus números" para um plano de ação claro, com prioridades definidas e caminho mapeado.</p>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step-card fade-in">
+        <div class="step-num">01</div>
+        <span class="step-num-suffix">Você responde</span>
+        <h3>Questionário Estruturado</h3>
+        <p>Após confirmar sua vaga, você recebe um questionário guiado para preencher no seu ritmo. Aborda faturamento, custos, equipe, serviços e fluxo de caixa de forma organizada.</p>
+        <p class="step-meta">Duração: <strong>~30 minutos</strong></p>
+      </div>
+
+      <div class="step-card fade-in">
+        <div class="step-num">02</div>
+        <span class="step-num-suffix">Thiago analisa</span>
+        <h3>Análise Personalizada</h3>
+        <p>Com seus dados em mãos, Dr. Thiago examina cada detalhe: identifica gargalos, serviços subprecificados, custos ocultos e oportunidades que você ainda não enxergou.</p>
+        <p class="step-meta">Prazo: <strong>até 5 dias úteis</strong></p>
+      </div>
+
+      <div class="step-card fade-in">
+        <div class="step-num">03</div>
+        <span class="step-num-suffix">Juntos, ao vivo</span>
+        <h3>Reunião de Devolutiva</h3>
+        <p>Uma videochamada de 1 hora dedicada exclusivamente ao seu negócio. Apresentação dos achados, plano de ação com prioridades claras e tempo para todas as suas perguntas.</p>
+        <p class="step-meta">Duração: <strong>60 minutos</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Discover / Outcomes -->
+<section class="discover-section">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="eyebrow center">O que você vai descobrir</span>
+      <h2 class="title">Respostas claras para perguntas<br>que <em>não te deixam dormir.</em></h2>
+    </div>
+
+    <div class="discover-grid">
+
+      <div class="discover-card fade-in">
+        <div class="discover-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 3v18h18M7 14l4-4 4 4 5-5"/></svg>
+        </div>
+        <h3>Onde seu lucro está sumindo</h3>
+        <p>Quais despesas estão consumindo sua margem sem você perceber, quais decisões financeiras estão drenando o caixa silenciosamente e o que está fora do radar.</p>
+      </div>
+
+      <div class="discover-card fade-in">
+        <div class="discover-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 100 7h5a3.5 3.5 0 110 7H6"/></svg>
+        </div>
+        <h3>Quanto você precisa cobrar</h3>
+        <p>O preço mínimo para cada serviço cobrir custos reais e gerar margem. Sem chute, sem comparar com a concorrência, com base nos números do seu próprio negócio.</p>
+      </div>
+
+      <div class="discover-card fade-in">
+        <div class="discover-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        </div>
+        <h3>Seu ponto de equilíbrio real</h3>
+        <p>Quanto sua clínica precisa faturar todo mês para não dar prejuízo, e quanto faturar para você ter o pró-labore que merece, não o sobrou no final.</p>
+      </div>
+
+      <div class="discover-card fade-in">
+        <div class="discover-icon">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+        </div>
+        <h3>Por onde começar a mudar</h3>
+        <p>As 3 a 5 prioridades concretas para os próximos 90 dias. Não 50 coisas para fazer "algum dia", mas o que mexer primeiro para ver resultado rápido e mensurável.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- What's included -->
+<section class="included-section">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="eyebrow center">O que está incluído</span>
+      <h2 class="title">Os três entregáveis<br>do <em>diagnóstico.</em></h2>
+    </div>
+
+    <div class="included-grid">
+
+      <div class="included-card fade-in">
+        <div class="included-icon">
+          <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z"/><path d="M14 2v6h6M9 13h6M9 17h6M9 9h1"/></svg>
+        </div>
+        <h3>Questionário Guiado</h3>
+        <p>Formulário estruturado que captura todas as informações relevantes do seu negócio, sem você precisar montar nada do zero.</p>
+        <ul class="included-list">
+          <li>Perguntas objetivas e diretas</li>
+          <li>Faturamento, custos fixos e variáveis</li>
+          <li>Análise de equipe e produtividade</li>
+          <li>Mapeamento completo de serviços</li>
+        </ul>
+      </div>
+
+      <div class="included-card fade-in">
+        <div class="included-icon">
+          <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg>
+        </div>
+        <h3>Análise Personalizada</h3>
+        <p>Dr. Thiago examina os seus dados pessoalmente, com olhos de veterinário gestor, não com template de consultor genérico.</p>
+        <ul class="included-list">
+          <li>Identificação de gargalos financeiros</li>
+          <li>Mapa de serviços lucrativos x deficitários</li>
+          <li>Diagnóstico de precificação</li>
+          <li>Relatório preparado para a reunião</li>
+        </ul>
+      </div>
+
+      <div class="included-card fade-in">
+        <div class="included-icon">
+          <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3z"/></svg>
+        </div>
+        <h3>Reunião de 1 Hora</h3>
+        <p>Uma hora ao vivo, dedicada exclusivamente ao seu negócio, com presença total e foco do Dr. Thiago. Sem grupo, sem roteiro padrão.</p>
+        <ul class="included-list">
+          <li>Apresentação completa do diagnóstico</li>
+          <li>Plano de ação com prioridades</li>
+          <li>Espaço para todas as suas dúvidas</li>
+          <li>Gravação para revisitar quando quiser</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Comparison -->
+<section class="compare-section">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="eyebrow center">Por que não outras opções</span>
+      <h2 class="title">Curso, contador ou <em>diagnóstico?</em></h2>
+      <p class="lead center">Cada caminho tem seu lugar. Mas quando o problema é "não sei o que está acontecendo no meu negócio", a resposta precisa ser diagnóstico, não conteúdo genérico.</p>
+    </div>
+
+    <div class="compare-table fade-in">
+      <div class="compare-row head">
+        <div class="compare-cell head-cell"></div>
+        <div class="compare-cell head-cell">Curso Online<span class="head-tag">Conteúdo genérico</span></div>
+        <div class="compare-cell head-cell">Contador<span class="head-tag">Foco fiscal</span></div>
+        <div class="compare-cell head-cell us">Diagnóstico Vet<span class="head-tag">Personalizado 1 a 1</span></div>
+      </div>
+
+      <div class="compare-row">
+        <div class="compare-cell label" data-label="">Análise dos seus números reais</div>
+        <div class="compare-cell center" data-label="Curso"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="compare-icon no"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+        <div class="compare-cell center" data-label="Contador"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="compare-icon"><path d="M5 12l5 5L20 7"/></svg></div>
+        <div class="compare-cell us-col" data-label="Diagnóstico Vet"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="compare-icon"><path d="M5 12l5 5L20 7"/></svg></div>
+      </div>
+
+      <div class="compare-row">
+        <div class="compare-cell label" data-label="">Foco em gestão e lucro</div>
+        <div class="compare-cell center" data-label="Curso"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="compare-icon"><path d="M5 12l5 5L20 7"/></svg></div>
+        <div class="compare-cell center" data-label="Contador"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="compare-icon no"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+        <div class="compare-cell us-col" data-label="Diagnóstico Vet"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="compare-icon"><path d="M5 12l5 5L20 7"/></svg></div>
+      </div>
+
+      <div class="compare-row">
+        <div class="compare-cell label" data-label="">Especialização em veterinária</div>
+        <div class="compare-cell center" data-label="Curso"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="compare-icon no"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+        <div class="compare-cell center" data-label="Contador"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="compare-icon no"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+        <div class="compare-cell us-col" data-label="Diagnóstico Vet"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="compare-icon"><path d="M5 12l5 5L20 7"/></svg></div>
+      </div>
+
+      <div class="compare-row">
+        <div class="compare-cell label" data-label="">Plano de ação com prioridades</div>
+        <div class="compare-cell center" data-label="Curso"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="compare-icon no"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+        <div class="compare-cell center" data-label="Contador"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="compare-icon no"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+        <div class="compare-cell us-col" data-label="Diagnóstico Vet"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="compare-icon"><path d="M5 12l5 5L20 7"/></svg></div>
+      </div>
+
+      <div class="compare-row">
+        <div class="compare-cell label" data-label="">Resultado em até 7 dias</div>
+        <div class="compare-cell center" data-label="Curso"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="compare-icon no"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+        <div class="compare-cell center" data-label="Contador"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="compare-icon no"><path d="M6 6l12 12M18 6L6 18"/></svg></div>
+        <div class="compare-cell us-col" data-label="Diagnóstico Vet"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="compare-icon"><path d="M5 12l5 5L20 7"/></svg></div>
+      </div>
+
+      <div class="compare-row">
+        <div class="compare-cell label" data-label="">Investimento</div>
+        <div class="compare-cell center" data-label="Curso">R$ 200 a R$ 2.000</div>
+        <div class="compare-cell center" data-label="Contador">R$ 500/mês fixo</div>
+        <div class="compare-cell us-col" data-label="Diagnóstico Vet">R$ 197 único</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- For who -->
+<section class="forwho-section">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="eyebrow center">Para quem é</span>
+      <h2 class="title">Este diagnóstico<br>foi feito <em>para você.</em></h2>
+      <p class="lead center">Não atendemos todo mundo. O método funciona melhor para quem está pronto para olhar os números e agir.</p>
+    </div>
+
+    <div class="forwho-grid">
+      <div class="forwho-card yes fade-in">
+        <div class="forwho-head">
+          <div class="forwho-mark">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
+          </div>
+          <h3 class="forwho-title">É para você se</h3>
+        </div>
+        <ul class="forwho-list">
+          <li>
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
+            <span>É médico veterinário com clínica própria, mesmo que pequena ou recém-aberta.</span>
+          </li>
+          <li>
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
+            <span>Sente que fatura bem, mas não consegue explicar para onde foi o dinheiro do mês.</span>
+          </li>
+          <li>
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
+            <span>Não tem clareza sobre os indicadores financeiros mais importantes do negócio.</span>
+          </li>
+          <li>
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
+            <span>Quer crescer com base em dados, não em achismo nem em comparação com a concorrência.</span>
+          </li>
+          <li>
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
+            <span>Está disposto a olhar para os números com honestidade e implementar o que for necessário.</span>
+          </li>
+          <li>
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
+            <span>Prefere atendimento personalizado a um curso gravado que você sabe que não vai terminar.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="forwho-card no fade-in">
+        <div class="forwho-head">
+          <div class="forwho-mark">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </div>
+          <h3 class="forwho-title">Não é para você se</h3>
+        </div>
+        <ul class="forwho-list">
+          <li>
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+            <span>Procura uma solução mágica que não exija nenhuma mudança real no seu negócio.</span>
+          </li>
+          <li>
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+            <span>Não tem o mínimo de dados para compartilhar (faturamento e custos aproximados, ao menos).</span>
+          </li>
+          <li>
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+            <span>Não pretende implementar as recomendações e prefere continuar no piloto automático.</span>
+          </li>
+          <li>
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+            <span>Já tem um gestor financeiro especializado em veterinária acompanhando você de perto.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials-section">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="eyebrow center">O que dizem</span>
+      <h2 class="title">Quem fez o diagnóstico<br>vê o negócio com <em>outros olhos.</em></h2>
+    </div>
+
+    <div class="testimonials-grid">
+
+      <div class="testimonial fade-in">
+        <div class="testimonial-mark">"</div>
+        <p class="testimonial-text">Em uma hora descobri que estava trabalhando para pagar uma despesa que eu nem sabia que tinha esse peso. Reorganizei e em 60 dias o caixa virou.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-name">Dra. Mariana C.</div>
+          <div class="testimonial-role">Clínica Geral · Curitiba</div>
+        </div>
+      </div>
+
+      <div class="testimonial fade-in">
+        <div class="testimonial-mark">"</div>
+        <p class="testimonial-text">Eu cobrava abaixo do meu custo em três procedimentos sem saber. O Thiago me mostrou em 20 minutos. Foi a melhor hora de reunião que tive na vida.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-name">Dr. Rafael M.</div>
+          <div class="testimonial-role">Cirurgia · São Paulo</div>
+        </div>
+      </div>
+
+      <div class="testimonial fade-in">
+        <div class="testimonial-mark">"</div>
+        <p class="testimonial-text">Achei que ia ouvir teoria. Recebi um plano com 4 prioridades e prazos. Nas semanas seguintes consegui implementar tudo sozinha.</p>
+        <div class="testimonial-author">
+          <div class="testimonial-name">Dra. Juliana A.</div>
+          <div class="testimonial-role">Felinos · Belo Horizonte</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Offer -->
+<section class="offer-section">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="eyebrow center">A oferta</span>
+      <h2 class="title">Quanto vale enxergar<br>os <em>seus próprios números?</em></h2>
+      <p class="lead center">Uma consultoria financeira personalizada com profissional especializado costuma custar a partir de R$&nbsp;1.000,00 por sessão. Por tempo limitado, o Diagnóstico Financeiro Vet está disponível por uma fração disso.</p>
+    </div>
+
+    <div class="scarcity-band fade-in">
+      <span class="dot-blink"></span>
+      <span>Restam <strong id="scarcityCount">4</strong> vagas no ciclo atual</span>
+    </div>
+
+    <div class="offer-box fade-in">
+      <p class="offer-stack-title">O que você recebe</p>
+
+      <div class="offer-stack">
+        <div class="offer-row">
+          <span class="offer-row-label">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
+            <span>Questionário financeiro estruturado</span>
+          </span>
+          <span class="offer-row-price">R$ 97</span>
+        </div>
+        <div class="offer-row">
+          <span class="offer-row-label">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
+            <span>Análise personalizada do negócio</span>
+          </span>
+          <span class="offer-row-price">R$ 297</span>
+        </div>
+        <div class="offer-row">
+          <span class="offer-row-label">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
+            <span>Reunião de devolutiva (1 hora)</span>
+          </span>
+          <span class="offer-row-price">R$ 397</span>
+        </div>
+      </div>
+
+      <div class="bonus-block">
+        <div class="bonus-block-title">Bônus inclusos</div>
+        <div class="bonus-row">
+          <span class="bonus-row-label">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
+            <span>Plano de ação documentado (PDF)</span>
+          </span>
+          <span class="bonus-row-price">R$ 147</span>
+        </div>
+        <div class="bonus-row">
+          <span class="bonus-row-label">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg>
+            <span>Gravação completa da reunião</span>
+          </span>
+          <span class="bonus-row-price">R$ 47</span>
+        </div>
+      </div>
+
+      <div class="offer-total">
+        <span class="offer-total-label">Valor total</span>
+        <span class="offer-total-price">R$ 985,00</span>
+      </div>
+
+      <div class="offer-price-row">
+        <span class="offer-price-tag">Investimento de hoje</span>
+        <div class="offer-price-anchor">
+          <span class="from">De R$ 500,00</span>
+          <span class="offer-price-off">60% off</span>
+        </div>
+        <div class="offer-price-main">R$ 197<span class="cents">,00</span></div>
+        <div class="offer-price-installment">ou 10x de R$ 19,70 sem juros</div>
+        <div class="offer-price-cash">à vista no Pix por <strong>R$ 187,15</strong> (5% de desconto)</div>
+      </div>
+
+      <div class="offer-cta-area">
+        <button class="btn btn-primary" onclick="openModal()">
+          Garantir minha vaga
+          <span class="arrow"></span>
+        </button>
+        <div class="offer-trust-row">
+          <span>
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Garantia de 7 dias
+          </span>
+          <span>
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+            Pagamento seguro via Ticto
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Guarantee -->
+<section class="guarantee-section">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="eyebrow center">Garantia</span>
+      <h2 class="title">Risco zero.<br>A decisão é <em>sua.</em></h2>
+    </div>
+
+    <div class="guarantee-box fade-in">
+      <div class="guarantee-seal">
+        <div class="guarantee-seal-num">7</div>
+        <div class="guarantee-seal-label">dias de<br>garantia</div>
+      </div>
+      <div>
+        <h3 class="guarantee-title">Satisfação garantida ou seu dinheiro de volta.</h3>
+        <p class="guarantee-text">Você preenche o questionário, participa da reunião e ainda tem 7 dias para avaliar. Se sentir que o diagnóstico não trouxe clareza ou valor real para o seu negócio, basta nos enviar um e-mail. Devolvemos 100% do valor sem perguntas e sem burocracia. Queremos que você saia da reunião com respostas, não com dívidas. Se não entregamos isso, o investimento é nosso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="eyebrow center">Dúvidas frequentes</span>
+      <h2 class="title">Tudo que você precisa<br>saber antes de <em>decidir.</em></h2>
+    </div>
+
+    <div class="faq-list fade-in">
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Como funciona o processo depois que eu compro?</span>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a">Assim que o pagamento é confirmado, você recebe por e-mail o link para agendar a reunião e o questionário financeiro. Você preenche no seu ritmo (em média 30 minutos), o Dr. Thiago analisa os dados e então acontece a videochamada de 1 hora. Todo o processo se completa em até 7 dias úteis após a compra.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Preciso ter planilhas ou sistema de gestão para participar?</span>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a">Não. O questionário foi desenhado para funcionar mesmo que você não tenha nada organizado. O mínimo necessário é uma noção aproximada do faturamento mensal e dos maiores custos. Mesmo com estimativas, o diagnóstico identifica os principais padrões e problemas do seu negócio.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>A reunião é ao vivo? Posso escolher o horário?</span>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a">Sim, a reunião é ao vivo via Google Meet ou Zoom. Após a compra, você recebe acesso à agenda do Dr. Thiago para escolher o melhor horário. As vagas são limitadas justamente para garantir atenção total a cada cliente, e por isso costumam esgotar rapidamente.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>O que recebo ao final da reunião?</span>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a">Você recebe a gravação completa da reunião para assistir quantas vezes precisar, um resumo escrito com os principais achados e um plano de ação documentado com as 3 a 5 prioridades mais importantes para os próximos 90 dias. Tudo enviado por e-mail em até 48 horas após a reunião.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Serve para clínica pequena ou recém-aberta?</span>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a">Sim, e especialmente para elas. Os piores hábitos financeiros se formam no início do negócio e causam problemas por anos. Fazer o diagnóstico cedo significa corrigir o rumo antes que os erros se acumulem. Para clínicas maiores, o diagnóstico ajuda a identificar por que o crescimento do faturamento não está se convertendo em lucro.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Como funciona a garantia de 7 dias?</span>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a">Após a reunião, você tem 7 dias para avaliar o resultado. Se não sentir que o diagnóstico trouxe valor real para o seu negócio, basta enviar um e-mail solicitando o reembolso. Devolvemos 100% do valor sem burocracia e sem perguntas. Se não conseguimos te entregar clareza, o investimento é nosso.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Quantas vagas estão disponíveis?</span>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a">As vagas são controladas pela agenda do Dr. Thiago, que garante atenção personalizada a cada cliente. Quando a agenda enche, novas compras ficam em lista de espera para o próximo ciclo, o que pode demorar semanas. Se a página ainda está aberta, há vagas para o ciclo atual.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>O Dr. Thiago atende pessoalmente todas as reuniões?</span>
+          <span class="icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a">Sim. Cada análise e cada reunião é conduzida pessoalmente pelo Dr. Thiago. Não há equipe intermediária, não há análise terceirizada e não há template genérico. Esse é justamente o motivo das vagas serem limitadas: garantir atenção real a quem confia o negócio para diagnóstico.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="finalcta-section">
+  <div class="container">
+    <div class="finalcta-inner fade-in">
+      <span class="eyebrow center">Última chamada</span>
+      <h2>Chega de tomar decisões<br>sem saber <em>os números.</em></h2>
+      <p class="finalcta-sub">Você passou anos construindo a sua clínica. Merece saber, com clareza, se ela está te pagando o que você merece, e o que precisa mudar para isso acontecer. Uma hora de reunião pode redirecionar a trajetória financeira do seu negócio para sempre.</p>
+
+      <div class="finalcta-price">
+        <p class="finalcta-from"><span class="strike">De R$ 500,00</span> por</p>
+        <p class="finalcta-main">R$ 197,00</p>
+        <p class="finalcta-installment">10x de R$ 19,70 · ou R$ 187,15 no Pix</p>
+      </div>
+
+      <button class="btn btn-primary" onclick="openModal()" style="padding:22px 48px;font-size:1rem">
+        Quero meu diagnóstico
+        <span class="arrow"></span>
+      </button>
+
+      <p class="finalcta-note">Garantia de 7 dias · Pagamento seguro · Vagas limitadas por agenda</p>
+
+      <div class="finalcta-timer-row">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        Oferta encerra em <span id="footerTimer">--:--:--</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <img src="assets/images/logo-v3.webp" alt="Thiago Alemão · Gestão Empresarial Veterinária" class="footer-logo" width="180" height="64" loading="lazy">
+
+  <p class="footer-cta">Ainda tem dúvidas? <em>Fale com a gente antes de decidir.</em></p>
+
+  <div class="footer-links">
+    <a href="mailto:contato@thiagoalemao.com.br" class="footer-link">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      contato@thiagoalemao.com.br
+    </a>
+    <a href="https://www.instagram.com/thiagoalemaovet?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="footer-link" target="_blank" rel="noopener">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      @thiagoalemaovet
+    </a>
+  </div>
+
+  <div class="footer-divider"></div>
+
+  <p class="footer-text">
+    Thiago Alemão · Gestão Empresarial Veterinária<span class="sep">·</span>CNPJ: 39.504.037/0001-92<br>
+    <a href="https://www.thiagoalemao.com.br/termos">Termos de Uso</a><span class="sep">|</span><a href="https://www.thiagoalemao.com.br/privacidade">Política de Privacidade</a>
+  </p>
+</footer>
+
+<!-- Sticky CTA -->
+<div class="sticky-cta" id="stickyCta">
+
+  <div class="sticky-product">
+    <span class="sticky-eyebrow">Diagnóstico Financeiro Vet</span>
+    <div class="sticky-price-row">
+      <span class="sticky-from">R$ 500</span>
+      <span class="sticky-price">R$ 197</span>
+      <span class="sticky-installment">10x de R$ 19,70 sem juros</span>
+    </div>
+  </div>
+
+  <div class="sticky-timer">
+    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+    <div class="sticky-timer-text">
+      <span class="sticky-timer-label">Oferta encerra em</span>
+      <span class="sticky-timer-value" id="stickyTimer">--:--:--</span>
+    </div>
+  </div>
+
+  <button class="sticky-btn" onclick="openModal()">
+    Garantir vaga
+    <span class="arrow"></span>
+  </button>
+
+</div>
+
+<!-- Lead modal -->
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()" aria-label="Fechar">×</button>
+
+    <!-- Step 1: Lead form -->
+    <div id="modalStep1">
+      <p class="modal-eyebrow">Diagnóstico Financeiro Vet</p>
+      <h3 class="modal-title" id="modalTitle">Garanta sua vaga</h3>
+      <p class="modal-sub">Preencha seus dados para gerar seu pagamento.</p>
+      <form class="modal-form" id="leadForm">
+        <input type="text" class="modal-input" id="leadName" placeholder="Nome completo" required autocomplete="name">
+        <select class="modal-input" id="leadCargo" required>
+          <option value="" disabled selected>Você é...</option>
+          <option value="Veterinário Gestor">Veterinário Gestor (clínica / hospital)</option>
+          <option value="Veterinário Autônomo">Veterinário Autônomo</option>
+        </select>
+        <input type="email" class="modal-input" id="leadEmail" placeholder="Seu melhor e-mail" required autocomplete="email">
+        <input type="tel" class="modal-input" id="leadPhone" placeholder="WhatsApp com DDD" required autocomplete="tel" inputmode="tel">
+        <input type="text" class="modal-input" id="leadCpf" placeholder="CPF ou CNPJ" required inputmode="numeric" autocomplete="off" maxlength="18">
+        <button type="submit" class="modal-submit" id="leadSubmitBtn">Gerar meu pagamento</button>
+        <p class="modal-note">
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          Seus dados estão seguros. Sem spam.
+        </p>
+      </form>
+    </div>
+
+    <!-- Step 2: Payment -->
+    <div id="modalStep2" style="display:none">
+      <p class="modal-eyebrow">Escolha como pagar</p>
+      <h3 class="modal-title">Diagnóstico Financeiro Vet</h3>
+      <p class="modal-sub" style="margin-bottom:24px">Selecione o método de pagamento preferido.</p>
+
+      <!-- Payment tabs -->
+      <div class="pay-tabs">
+        <button class="pay-tab active" id="tabPix" onclick="switchTab('pix')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M11.9 2C6.4 2 2 6.4 2 11.9s4.4 9.9 9.9 9.9 9.9-4.4 9.9-9.9S17.4 2 11.9 2zm4.2 13.5l-2.8-2.8c-.3.1-.6.2-.9.2-.4 0-.7-.1-1-.2l-2.8 2.8c-.4.4-1 .4-1.4 0s-.4-1 0-1.4l2.8-2.8c-.1-.3-.2-.6-.2-1 0-.4.1-.7.2-1L7.2 6.5c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l2.8 2.8c.3-.1.6-.2 1-.2.3 0 .6.1.9.2l2.8-2.8c.4-.4 1-.4 1.4 0s.4 1 0 1.4l-2.8 2.8c.1.3.2.6.2 1s-.1.7-.2 1l2.8 2.8c.4.4.4 1 0 1.4s-1 .4-1.4 0z"/></svg>
+          Pix <span class="pay-tab-badge">5% off</span>
+        </button>
+        <button class="pay-tab" id="tabCard" onclick="switchTab('card')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+          Cartão / Boleto
+        </button>
+      </div>
+
+      <!-- Pix panel -->
+      <div id="panelPix" class="pay-panel">
+        <div class="pix-price-row">
+          <span class="pix-price-label">Valor Pix (5% off)</span>
+          <span class="pix-price-value">R$ 187,15</span>
+        </div>
+        <div class="pix-qr-wrap">
+          <img id="pixQrImg" src="" alt="QR Code Pix" class="pix-qr-img">
+        </div>
+        <p class="pix-instruction">Abra o app do seu banco → Pix → Ler QR Code</p>
+        <div class="pix-copy-wrap">
+          <input type="text" id="pixCodeInput" class="pix-code-input" readonly>
+          <button class="pix-copy-btn" onclick="copyPixCode()" id="pixCopyBtn">Copiar código</button>
+        </div>
+        <p class="pix-expires" id="pixExpiresText"></p>
+        <div class="pix-waiting" id="pixWaiting">Aguardando confirmação do pagamento…</div>
+      </div>
+
+      <!-- Card panel -->
+      <div id="panelCard" class="pay-panel" style="display:none">
+        <div class="card-price-info">
+          <div class="card-price-main">R$ 197,00</div>
+          <div class="card-price-or">ou</div>
+          <div class="card-price-installment">10x de R$ 19,70 <span>sem juros</span></div>
+        </div>
+        <a id="cardPayLink" href="#" target="_blank" rel="noopener" class="modal-submit" style="display:block;text-align:center;text-decoration:none;margin-top:8px">
+          Pagar com Cartão / Boleto
+        </a>
+        <p class="modal-note" style="margin-top:12px">
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          Ambiente seguro ASAAS. Dados criptografados.
+        </p>
+      </div>
+
+      <button class="modal-back-btn" onclick="goBackToForm()">← Corrigir dados</button>
+    </div>
+
+    <!-- Loading state -->
+    <div id="modalLoading" style="display:none;text-align:center;padding:32px 0">
+      <div class="modal-spinner"></div>
+      <p style="color:var(--text-2);font-size:.9rem;margin-top:16px">Gerando seu pagamento…</p>
+    </div>
+
+    <!-- Error state -->
+    <div id="modalError" style="display:none;text-align:center;padding:16px 0">
+      <p id="modalErrorMsg" style="color:#f87171;font-size:.9rem;margin-bottom:16px"></p>
+      <button class="modal-submit" onclick="goBackToForm()">Tentar novamente</button>
+    </div>
+
+    <!-- Success state -->
+    <div id="modalSuccess" style="display:none;text-align:center;padding:8px 0">
+      <div class="success-check" aria-hidden="true">
+        <svg viewBox="0 0 64 64" width="64" height="64" fill="none">
+          <circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="2"/>
+          <path d="M20 33l9 9 16-18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h3 class="modal-title" style="margin-bottom:12px">Pagamento confirmado!</h3>
+      <p class="modal-sub" style="margin-bottom:20px">Recebemos o seu pagamento de <strong id="successValue"></strong> via <strong id="successMethod"></strong>.</p>
+      <div class="success-next">
+        <p class="success-next-title">Próximos passos</p>
+        <ol class="success-steps">
+          <li>Em até 10 minutos você recebe um e-mail com o link da minha agenda para você escolher o melhor horário.</li>
+          <li>Logo depois você receberá o questionário guiado, que precisa ser preenchido antes da reunião.</li>
+          <li>No dia, te encontro na videochamada por 1 hora com a análise pronta.</li>
+        </ol>
+      </div>
+      <p class="success-contact">Não recebeu o e-mail em 10min? Fale comigo: <a href="mailto:contato@thiagoalemao.com.br">contato@thiagoalemao.com.br</a></p>
+      <button class="modal-submit" onclick="closeModal()" style="margin-top:8px">Fechar</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Sempre usa caminho relativo: a Vercel serve /api/* como serverless functions
+// e em dev local o Express expõe os mesmos endpoints na mesma origem.
+const API_BASE = '';
+
+// Countdown timer (24h evergreen)
+function getDeadline(){
+  let d = localStorage.getItem('dfv_deadline');
+  if(!d || isNaN(Number(d))){
+    d = Date.now() + 24*60*60*1000;
+    localStorage.setItem('dfv_deadline', d);
+  }
+  return Number(d);
+}
+
+function formatTime(ms){
+  if(ms<=0)return'00:00:00';
+  const s=Math.floor(ms/1000);
+  const h=Math.floor(s/3600);
+  const m=Math.floor((s%3600)/60);
+  const sec=s%60;
+  return[h,m,sec].map(n=>String(n).padStart(2,'0')).join(':');
+}
+
+function updateTimers(){
+  const remaining=getDeadline()-Date.now();
+  const t=formatTime(remaining);
+  ['navTimer','footerTimer','stickyTimer'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(el)el.textContent=t;
+  });
+}
+updateTimers();
+setInterval(updateTimers,1000);
+
+// Sticky CTA
+const heroBtn=document.querySelector('.hero-content .btn-primary');
+const stickyCta=document.getElementById('stickyCta');
+if(heroBtn){
+  const stickyObs=new IntersectionObserver(entries=>{
+    stickyCta.classList.toggle('visible',!entries[0].isIntersecting);
+  },{threshold:0});
+  stickyObs.observe(heroBtn);
+}
+
+// Scroll fade-in
+const fadeEls=document.querySelectorAll('.fade-in');
+const fadeObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');fadeObs.unobserve(e.target);}});
+},{threshold:0.1});
+fadeEls.forEach(el=>fadeObs.observe(el));
+
+// FAQ accordion (with aria-expanded)
+document.querySelectorAll('.faq-q').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const item=btn.parentElement;
+    const wasOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i=>{
+      i.classList.remove('open');
+      const q=i.querySelector('.faq-q');
+      if(q)q.setAttribute('aria-expanded','false');
+    });
+    if(!wasOpen){
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+    }
+  });
+});
+
+// ── Máscara CPF/CNPJ ─────────────────────────────────────────────────────────
+function maskCpfCnpj(value){
+  const d = value.replace(/\D/g,'').slice(0,14);
+  if(d.length <= 11){
+    return d
+      .replace(/(\d{3})(\d)/,'$1.$2')
+      .replace(/(\d{3})(\d)/,'$1.$2')
+      .replace(/(\d{3})(\d{1,2})$/,'$1-$2');
+  }
+  return d
+    .replace(/^(\d{2})(\d)/,'$1.$2')
+    .replace(/^(\d{2})\.(\d{3})(\d)/,'$1.$2.$3')
+    .replace(/\.(\d{3})(\d)/,'.$1/$2')
+    .replace(/(\d{4})(\d)/,'$1-$2');
+}
+const cpfField = document.getElementById('leadCpf');
+if(cpfField){
+  cpfField.addEventListener('input', e => {
+    e.target.value = maskCpfCnpj(e.target.value);
+  });
+}
+
+// ── Modal state helpers ──────────────────────────────────────────────────────
+function showModalSection(id){
+  ['modalStep1','modalStep2','modalLoading','modalError','modalSuccess'].forEach(s=>{
+    document.getElementById(s).style.display = s===id ? '' : 'none';
+  });
+}
+
+// ── Polling do status do pagamento ───────────────────────────────────────────
+let pollingState = { pixId: null, cardId: null, timer: null, attempts: 0 };
+const POLL_INTERVAL = 5000;       // 5 segundos
+const POLL_MAX_ATTEMPTS = 360;    // 30 minutos (5s * 360 = 1800s)
+const CONFIRMED_STATUSES = ['RECEIVED','CONFIRMED','RECEIVED_IN_CASH'];
+
+function stopPolling(){
+  if(pollingState.timer){clearTimeout(pollingState.timer);}
+  pollingState = { pixId:null, cardId:null, timer:null, attempts:0 };
+}
+
+async function pollOnce(){
+  pollingState.attempts++;
+  if(pollingState.attempts > POLL_MAX_ATTEMPTS){ stopPolling(); return; }
+
+  const ids = [pollingState.pixId, pollingState.cardId].filter(Boolean);
+  for(const id of ids){
+    try{
+      const r = await fetch(`${API_BASE}/api/payment-status/${id}`);
+      if(!r.ok) continue;
+      const data = await r.json();
+      if(CONFIRMED_STATUSES.includes(data.status)){
+        showPaymentConfirmed(data);
+        stopPolling();
+        return;
+      }
+    }catch(e){ /* silencioso, tenta de novo */ }
+  }
+  pollingState.timer = setTimeout(pollOnce, POLL_INTERVAL);
+}
+
+function startPolling(pixId, cardId){
+  stopPolling();
+  pollingState.pixId = pixId;
+  pollingState.cardId = cardId;
+  pollingState.timer = setTimeout(pollOnce, POLL_INTERVAL);
+}
+
+function showPaymentConfirmed(data){
+  if(typeof fbq!=='undefined'){
+    fbq('track','Purchase',{value: data.value, currency:'BRL'});
+  }
+  // Redireciona para página de obrigado
+  window.location.href = '/obrigado.html';
+}
+
+function openModal(){
+  showModalSection('modalStep1');
+  const btn=document.getElementById('leadSubmitBtn');
+  if(btn){btn.textContent='Gerar meu pagamento';btn.disabled=false;}
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+  setTimeout(()=>{
+    const firstInput=document.getElementById('leadName');
+    if(firstInput)firstInput.focus();
+  },200);
+  if(typeof fbq!=='undefined')fbq('track','InitiateCheckout');
+}
+
+function closeModal(){
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow='';
+  stopPolling();
+}
+
+function goBackToForm(){
+  showModalSection('modalStep1');
+  stopPolling();
+  const btn=document.getElementById('leadSubmitBtn');
+  if(btn){btn.textContent='Gerar meu pagamento';btn.disabled=false;}
+}
+
+document.getElementById('modalOverlay').addEventListener('click',e=>{
+  if(e.target===e.currentTarget)closeModal();
+});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape')closeModal();
+});
+
+// ── Payment tabs ─────────────────────────────────────────────────────────────
+function switchTab(tab){
+  const isPix = tab==='pix';
+  document.getElementById('panelPix').style.display  = isPix ? '' : 'none';
+  document.getElementById('panelCard').style.display = isPix ? 'none' : '';
+  document.getElementById('tabPix').classList.toggle('active', isPix);
+  document.getElementById('tabCard').classList.toggle('active', !isPix);
+}
+
+// ── Copy Pix code ─────────────────────────────────────────────────────────────
+function copyPixCode(){
+  const input=document.getElementById('pixCodeInput');
+  const btn=document.getElementById('pixCopyBtn');
+  navigator.clipboard.writeText(input.value).then(()=>{
+    btn.textContent='Copiado!';
+    btn.classList.add('copied');
+    setTimeout(()=>{btn.textContent='Copiar código';btn.classList.remove('copied');},2500);
+  }).catch(()=>{
+    input.select();
+    document.execCommand('copy');
+    btn.textContent='Copiado!';
+    setTimeout(()=>{btn.textContent='Copiar código';},2500);
+  });
+}
+
+// ── Lead form submit → ASAAS checkout ────────────────────────────────────────
+document.getElementById('leadForm').addEventListener('submit',async function(e){
+  e.preventDefault();
+  const btn=document.getElementById('leadSubmitBtn');
+  btn.textContent='Gerando pagamento…';
+  btn.disabled=true;
+
+  const cargoRaw=document.getElementById('leadCargo').value;
+  const perfil=cargoRaw==='Veterinário Gestor'?'gestor':'autonomo';
+  const cpfDigits=document.getElementById('leadCpf').value.replace(/\D/g,'');
+  if(cpfDigits.length!==11 && cpfDigits.length!==14){
+    btn.textContent='Gerar meu pagamento';
+    btn.disabled=false;
+    alert('Informe um CPF (11 dígitos) ou CNPJ (14 dígitos) válido.');
+    return;
+  }
+  const body={
+    name:  document.getElementById('leadName').value,
+    email: document.getElementById('leadEmail').value,
+    phone: document.getElementById('leadPhone').value,
+    cpfCnpj: cpfDigits,
+    perfil,
+  };
+
+  showModalSection('modalLoading');
+
+  try{
+    const resp=await fetch(`${API_BASE}/api/checkout`,{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(body),
+    });
+    const data=await resp.json();
+
+    if(!resp.ok) throw new Error(data.error || 'Erro desconhecido');
+
+    // Populate Pix panel
+    document.getElementById('pixQrImg').src=`data:image/png;base64,${data.pixQrCodeImage}`;
+    document.getElementById('pixCodeInput').value=data.pixCode;
+    if(data.pixExpires){
+      const d=new Date(data.pixExpires+'T23:59:59');
+      document.getElementById('pixExpiresText').textContent=
+        `QR Code válido até ${d.toLocaleDateString('pt-BR')}`;
+    }
+
+    // Populate card panel
+    document.getElementById('cardPayLink').href=data.invoiceUrl;
+
+    // Track
+    if(typeof fbq!=='undefined')fbq('track','Lead');
+    sessionStorage.setItem('dfv_lead_done','1');
+
+    switchTab('pix');
+    showModalSection('modalStep2');
+
+    // Inicia polling pra detectar confirmação automática
+    startPolling(data.pixPaymentId, data.cardPaymentId);
+  }catch(err){
+    document.getElementById('modalErrorMsg').textContent=
+      err.message || 'Não foi possível gerar o pagamento. Tente novamente.';
+    showModalSection('modalError');
+  }
+});
+</script>
+</body>
+</html>
