@@ -1,7 +1,11 @@
 // api/_helpers.js
-// Utilitários compartilhados pelas funções serverless da Vercel.
-
 'use strict';
+
+function cors(res, origin) {
+  res.setHeader('Access-Control-Allow-Origin', origin || '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+}
 
 function readJsonBody(req) {
   if (req.body && typeof req.body === 'object') return Promise.resolve(req.body);
@@ -29,4 +33,4 @@ function daysFromNow(days) {
   return new Date(Date.now() + days * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
 }
 
-module.exports = { readJsonBody, methodNotAllowed, tomorrowDate, daysFromNow };
+module.exports = { cors, readJsonBody, methodNotAllowed, tomorrowDate, daysFromNow };
