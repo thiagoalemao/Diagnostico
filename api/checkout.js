@@ -1,14 +1,13 @@
 // api/checkout.js — Vercel Serverless Function
-// POST /api/checkout
-// Cria cliente no Asaas + cobranças Pix e Cartão simultâneas e dispara lead ao CRM.
-
 'use strict';
 
 const asaas = require('../lib/asaas');
 const crm = require('../lib/crm');
-const { readJsonBody, methodNotAllowed, tomorrowDate, daysFromNow } = require('./_helpers');
+const { cors, readJsonBody, methodNotAllowed, tomorrowDate, daysFromNow } = require('./_helpers');
 
 module.exports = async function handler(req, res) {
+  cors(res);
+  if (req.method === 'OPTIONS') return res.status(200).end();
   if (req.method !== 'POST') return methodNotAllowed(res, ['POST']);
 
   let body;
@@ -25,20 +24,14 @@ module.exports = async function handler(req, res) {
   }
 
   try {
-    // Lead → CRM (não-bloqueante; nunca derruba o checkout)
     crm.sendToCrm({
       event: 'checkout_started',
       source: 'diagnostico',
       submittedAt: new Date().toISOString(),
-      lead: {
-        name, email, phone,
-        perfil: perfil || 'desconhecido',
-        cpfCnpj: cleanDoc,
-      },
-    }).catch(() => { /* silencioso */ });
+      lead: { name, email, phone, perfil: perfil || 'desconhecido', cpfCnpj: cleanDoc },
+    }).catch(() => {});
 
     const customerId = await asaas.findOrCreateCustomer({ name, email, phone, cpfCnpj: cleanDoc });
-
     const pixDue = tomorrowDate();
     const cardDue = daysFromNow(3);
 
