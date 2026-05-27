@@ -1,13 +1,12 @@
 // api/payment-status/[id].js — Vercel Serverless Function
-// GET /api/payment-status/:id
-// Consulta status do pagamento no Asaas (usado pelo polling do frontend).
-
 'use strict';
 
 const asaas = require('../../lib/asaas');
-const { methodNotAllowed } = require('../_helpers');
+const { cors, methodNotAllowed } = require('../_helpers');
 
 module.exports = async function handler(req, res) {
+  cors(res);
+  if (req.method === 'OPTIONS') return res.status(200).end();
   if (req.method !== 'GET') return methodNotAllowed(res, ['GET']);
 
   const id = (req.query && req.query.id) || '';
